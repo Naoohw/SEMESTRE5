@@ -1,0 +1,34 @@
+body{
+    background-color: rgb(139, 157, 103);
+}
+.ProyectoTit{
+    font-family: hug me tight;
+    text-align: center;
+    font-size: 35px;
+}
+.titulo{
+    font-family: hug me tight;
+    text-align: center;
+    font-size: 30px;
+    color:rgb(214, 210, 190);
+}
+label{
+    font-family: Arial Black;
+    color: rgb(59, 70, 79);
+  
+}
+input{
+    background-color: rgb(199, 206, 212);
+    font-family: Cascadia Code;
+    color: rgb(59, 70, 79);
+    text-align: center;
+   
+}
+.conte{
+text-align: center;
+background-color: aliceblue;
+height: 400px;
+width: 300px;
+margin: 100px;
+
+}
