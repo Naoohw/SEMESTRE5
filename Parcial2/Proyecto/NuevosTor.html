@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Torneos</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+           
+            color: #333;
+            margin: 20px;
+        }
+        h1 {
+            color: #4a545e;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 12px;
+            border: 1px solid #ccc;
+            text-align: left;
+        }
+        th {
+            background-color: #4f7b70;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lista de Torneos</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre del Torneo</th>
+                <th>Fecha</th>
+            </tr>
+        </thead>
+        <tbody id="torneos-lista">
+            <!-- Aquí se insertarán los torneos -->
+        </tbody>
+    </table>
+
+    <script>
+        // Lista de torneos
+        const torneos = [
+            { nombre: "Torneo de Verano", fecha: "2024-06-15" },
+            { nombre: "Torneo de Invierno", fecha: "2024-12-10" },
+            { nombre: "Copa Primavera", fecha: "2024-03-20" },
+            { nombre: "Campeonato Nacional", fecha: "2024-09-05" }
+        ];
+
+        // Función para mostrar la lista de torneos en la tabla
+        function mostrarTorneos() {
+            const listaTorneos = document.getElementById("torneos-lista");
+            torneos.forEach(torneo => {
+                const fila = document.createElement("tr");
+                fila.innerHTML = `
+                    <td>${torneo.nombre}</td>
+                    <td>${torneo.fecha}</td>
+                `;
+                listaTorneos.appendChild(fila);
+            });
+        }
+
+        // Llamar a la función para mostrar los torneos al cargar la página
+        document.addEventListener("DOMContentLoaded", mostrarTorneos);
+    </script>
+</body>
+</html>
